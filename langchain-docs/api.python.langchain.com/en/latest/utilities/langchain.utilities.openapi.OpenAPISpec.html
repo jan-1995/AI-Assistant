@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>langchain.utilities.openapi.OpenAPISpec &mdash; 🦜🔗 LangChain 0.0.247</title>
+  
+  <link rel="canonical" href="http://scikit-learn.org/stable/utilities/langchain.utilities.openapi.OpenAPISpec.html" />
+
+  
+
+  <link rel="stylesheet" href="../_static/css/vendor/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="/_/static/css/badge_only.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+<script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script> 
+
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="/_/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/api_reference", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "utilities/langchain.utilities.openapi.OpenAPISpec", "programming_language": "words", "project": "langchain", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "scikit-learn-modern", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="/_/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+<body>
+
+
+
+
+
+<nav id="navbar" class="sk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid sk-docs-container px-0">
+    <button
+      id="sk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="sk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../api_reference.html">API</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../experimental_api_reference.html">Experimental</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://python.langchain.com/">Python Docs</a>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="../search.html" method="get">
+            <input class="sk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="sk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="d-flex" id="sk-doc-wrapper">
+    <input type="checkbox" name="sk-toggle-checkbox" id="sk-toggle-checkbox">
+    <label id="sk-sidemenu-toggle" class="sk-btn-toggle-toc btn sk-btn-primary" for="sk-toggle-checkbox">Toggle Menu</label>
+    <div id="sk-sidebar-wrapper" class="border-right">
+      <div class="sk-sidebar-toc-wrapper">
+        <div class="btn-group w-100 mb-2" role="group" aria-label="rellinks">
+            <a href="langchain.utilities.openapi.HTTPVerb.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.utilities.openapi.HTTPVerb">Prev</a><a href="../api_reference.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain API Reference">Up</a>
+            <a href="langchain.utilities.openweathermap.OpenWeatherMapAPIWrapper.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.utilities.openweathermap.OpenWeatherMapAPIWrapper">Next</a>
+        </div>
+        <div class="alert alert-warning p-1 mb-2" role="alert">
+          <p class="text-center mb-0">
+          <strong>LangChain 0.0.247</strong><br/>
+          </p>
+        </div>
+            <div class="sk-sidebar-toc">
+              <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.utilities.openapi</span></code>.OpenAPISpec</a></li>
+</ul>
+
+            </div>
+      </div>
+    </div>
+    <div id="sk-page-content-wrapper">
+      <div class="sk-page-content container-fluid body px-md-3" role="main">
+        
+  <section id="langchain-utilities-openapi-openapispec">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.utilities.openapi</span></code>.OpenAPISpec<a class="headerlink" href="#langchain-utilities-openapi-openapispec" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langchain.utilities.openapi.</span></span><span class="sig-name descname"><span class="pre">OpenAPISpec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'3.1.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jsonSchemaDialect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">servers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Server</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[Server(url='/',</span> <span class="pre">description=None,</span> <span class="pre">variables=None)]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">PathItem</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhooks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">PathItem</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Reference</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Components</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">security</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tag</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">externalDocs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">ExternalDocumentation</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">OpenAPI</span></code></p>
+<p>OpenAPI Model that removes misformatted parts of the spec.</p>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.components">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">components</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.components.Components</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>An element to hold various schemas for the document.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.externalDocs">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">externalDocs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.external_documentation.ExternalDocumentation</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.externalDocs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Additional external documentation.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.info">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.info.Info</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.info" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>REQUIRED</strong>. Provides metadata about the API. The metadata MAY be used by tooling as required.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.jsonSchemaDialect">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jsonSchemaDialect</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.jsonSchemaDialect" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default value for the <cite>$schema</cite> keyword within [Schema Objects](#schemaObject)
+contained within this OAS document. This MUST be in the form of a URI.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.openapi">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openapi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'3.1.0'</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.openapi" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>REQUIRED</strong>. This string MUST be the [version number](#versions)
+of the OpenAPI Specification that the OpenAPI document uses.
+The <cite>openapi</cite> field SHOULD be used by tooling to interpret the OpenAPI document.
+This is <em>not</em> related to the API [<cite>info.version</cite>](#infoVersion) string.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.paths">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">paths</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.path_item.PathItem</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The available paths and operations for the API.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.security">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">security</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.security" title="Permalink to this definition">¶</a></dt>
+<dd><p>A declaration of which security mechanisms can be used across the API.
+The list of values includes alternative security requirement objects that can be used.
+Only one of the security requirement objects need to be satisfied to authorize a request.
+Individual operations can override this definition.
+To make security optional, an empty security requirement (<cite>{}</cite>) can be included in the array.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.servers">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">servers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.server.Server</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Server(url='/',</span> <span class="pre">description=None,</span> <span class="pre">variables=None)]</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.servers" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of Server Objects, which provide connectivity information to a target server.
+If the <cite>servers</cite> property is not provided, or is an empty array,
+the default value would be a [Server Object](#serverObject) with a [url](#serverUrl) value of <cite>/</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.tags">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.tag.Tag</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of tags used by the document with additional metadata.
+The order of the tags can be used to reflect on their order by the parsing tools.
+Not all tags that are used by the [Operation Object](#operationObject) must be declared.
+The tags that are not declared MAY be organized randomly or based on the tools’ logic.
+Each tag name in the list MUST be unique.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.webhooks">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">webhooks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.path_item.PathItem</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">openapi_schema_pydantic.v3.v3_1_0.reference.Reference</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.webhooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The incoming webhooks that MAY be received as part of this API and that the API consumer MAY choose to implement.
+Closely related to the <cite>callbacks</cite> feature, this section describes requests initiated other than by an API call,
+for example by an out of band registration.
+The key name is a unique string to refer to each webhook,
+while the (optionally referenced) Path Item Object describes a request
+that may be initiated by the API provider and the expected responses.
+An [example](../examples/v3.1/webhook-example.yaml) is available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#langchain.utilities.openapi.OpenAPISpec" title="langchain.utilities.openapi.OpenAPISpec"><span class="pre">OpenAPISpec</span></a></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an OpenAPI spec from a file path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.from_spec_dict">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_spec_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#langchain.utilities.openapi.OpenAPISpec" title="langchain.utilities.openapi.OpenAPISpec"><span class="pre">OpenAPISpec</span></a></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.from_spec_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.from_spec_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an OpenAPI spec from a dict.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.from_text">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#langchain.utilities.openapi.OpenAPISpec" title="langchain.utilities.openapi.OpenAPISpec"><span class="pre">OpenAPISpec</span></a></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.from_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.from_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an OpenAPI spec from a text.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.from_url">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#langchain.utilities.openapi.OpenAPISpec" title="langchain.utilities.openapi.OpenAPISpec"><span class="pre">OpenAPISpec</span></a></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.from_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.from_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an OpenAPI spec from a URL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_cleaned_operation_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_cleaned_operation_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Operation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_cleaned_operation_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_cleaned_operation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a cleaned operation id from an operation id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_methods_for_path">
+<span class="sig-name descname"><span class="pre">get_methods_for_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_methods_for_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_methods_for_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of valid methods for the specified path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_operation">
+<span class="sig-name descname"><span class="pre">get_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Operation</span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_operation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the operation object for a given path and HTTP method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_parameters_for_operation">
+<span class="sig-name descname"><span class="pre">get_parameters_for_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Operation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Parameter</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_parameters_for_operation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_parameters_for_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the components for a given operation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_parameters_for_path">
+<span class="sig-name descname"><span class="pre">get_parameters_for_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Parameter</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_parameters_for_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_parameters_for_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_referenced_schema">
+<span class="sig-name descname"><span class="pre">get_referenced_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Reference</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Schema</span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_referenced_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_referenced_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a schema (or nested reference) or err.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_request_body_for_operation">
+<span class="sig-name descname"><span class="pre">get_request_body_for_operation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Operation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">RequestBody</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_request_body_for_operation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_request_body_for_operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the request body for a given operation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.get_schema">
+<span class="sig-name descname"><span class="pre">get_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Reference</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Schema</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Schema</span></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.get_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.parse_obj">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#langchain.utilities.openapi.OpenAPISpec" title="langchain.utilities.openapi.OpenAPISpec"><span class="pre">OpenAPISpec</span></a></span></span><a class="reference internal" href="../_modules/langchain/utilities/openapi.html#OpenAPISpec.parse_obj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.parse_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.base_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the base url.</p>
+</dd></dl>
+
+<dl class="py class pydantic_config">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.Config">
+<em class="property"><span class="pre">model</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langchain.utilities.openapi.OpenAPISpec.Config.extra">
+<span class="sig-name descname"><span class="pre">extra</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ignore'</span></em><a class="headerlink" href="#langchain.utilities.openapi.OpenAPISpec.Config.extra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<h1>Examples using OpenAPISpec<a class="headerlink" href="#langchain-utilities-openapi-openapispec" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python.langchain.com/docs/integrations/toolkits/openapi_nla">Natural Language APIs</a></p></li>
+<li><p><a class="reference external" href="https://python.langchain.com/docs/guides/evaluation/examples/openapi_eval">Evaluating an OpenAPI Chain</a></p></li>
+<li><p><a class="reference external" href="https://python.langchain.com/docs/modules/chains/additional/openapi">OpenAPI chain</a></p></li>
+</ul>
+</section>
+
+
+      </div>
+    <div class="container">
+      <footer class="sk-content-footer">
+            &copy; 2023, Harrison Chase.
+          Last updated on Jul 29, 2023.
+          <a href="../_sources/utilities/langchain.utilities.openapi.OpenAPISpec.rst.txt" rel="nofollow">Show this page source</a>
+      </footer>
+    </div>
+  </div>
+</div>
+<script src="../_static/js/vendor/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		'.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+    var hide_text = 'Hide prompts and outputs';
+    var show_text = 'Show prompts and outputs';
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        if (jthis.find('.gp').length > 0) {
+            var button = $('<span class="copybutton">&gt;&gt;&gt;</span>');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+            jthis.prepend(button);
+        }
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+    // define the behavior of the button when it's clicked
+    $('.copybutton').click(function(e){
+        e.preventDefault();
+        var button = $(this);
+        if (button.data('hidden') === 'false') {
+            // hide the code output
+            button.parent().find('.go, .gp, .gt').hide();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'hidden');
+            button.css('text-decoration', 'line-through');
+            button.attr('title', show_text);
+            button.data('hidden', 'true');
+        } else {
+            // show the code output
+            button.parent().find('.go, .gp, .gt').show();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'visible');
+            button.css('text-decoration', 'none');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+        }
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+</body>
+</html>

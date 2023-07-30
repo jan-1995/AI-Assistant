@@ -1,0 +1,678 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>langchain.smith.evaluation.config.RunEvalConfig &mdash; 🦜🔗 LangChain 0.0.247</title>
+  
+  <link rel="canonical" href="http://scikit-learn.org/stable/smith/langchain.smith.evaluation.config.RunEvalConfig.html" />
+
+  
+
+  <link rel="stylesheet" href="../_static/css/vendor/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="/_/static/css/badge_only.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+<script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script> 
+
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="/_/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/api_reference", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "smith/langchain.smith.evaluation.config.RunEvalConfig", "programming_language": "words", "project": "langchain", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "scikit-learn-modern", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="/_/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+<body>
+
+
+
+
+
+<nav id="navbar" class="sk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid sk-docs-container px-0">
+    <button
+      id="sk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="sk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../api_reference.html">API</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../experimental_api_reference.html">Experimental</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://python.langchain.com/">Python Docs</a>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="../search.html" method="get">
+            <input class="sk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="sk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="d-flex" id="sk-doc-wrapper">
+    <input type="checkbox" name="sk-toggle-checkbox" id="sk-toggle-checkbox">
+    <label id="sk-sidemenu-toggle" class="sk-btn-toggle-toc btn sk-btn-primary" for="sk-toggle-checkbox">Toggle Menu</label>
+    <div id="sk-sidebar-wrapper" class="border-right">
+      <div class="sk-sidebar-toc-wrapper">
+        <div class="btn-group w-100 mb-2" role="group" aria-label="rellinks">
+            <a href="langchain.smith.evaluation.config.EvalConfig.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.smith.evaluation.config.EvalConfig">Prev</a><a href="../api_reference.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain API Reference">Up</a>
+            <a href="langchain.smith.evaluation.runner_utils.InputFormatError.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.smith.evaluation.runner_utils.InputFormatError">Next</a>
+        </div>
+        <div class="alert alert-warning p-1 mb-2" role="alert">
+          <p class="text-center mb-0">
+          <strong>LangChain 0.0.247</strong><br/>
+          </p>
+        </div>
+            <div class="sk-sidebar-toc">
+              <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.smith.evaluation.config</span></code>.RunEvalConfig</a></li>
+</ul>
+
+            </div>
+      </div>
+    </div>
+    <div id="sk-page-content-wrapper">
+      <div class="sk-page-content container-fluid body px-md-3" role="main">
+        
+  <section id="langchain-smith-evaluation-config-runevalconfig">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.smith.evaluation.config</span></code>.RunEvalConfig<a class="headerlink" href="#langchain-smith-evaluation-config-runevalconfig" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langchain.smith.evaluation.config.</span></span><span class="sig-name descname"><span class="pre">RunEvalConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">EvaluatorType</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><span class="pre">EvalConfig</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_evaluators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">RunEvaluator</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.StringEvaluator.html#langchain.evaluation.schema.StringEvaluator" title="langchain.evaluation.schema.StringEvaluator"><span class="pre">StringEvaluator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_llm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Configuration for a run evaluation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>evaluators</strong> (<em>List</em><em>[</em><em>Union</em><em>[</em><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><em>EvaluatorType</em></a><em>, </em><a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><em>EvalConfig</em></a><em>]</em><em>]</em>) – Configurations for which evaluators to apply to the dataset run.
+Each can be the string of an <a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluatorType</span></code></a>, such
+as EvaluatorType.QA, the evaluator type string (“qa”), or a configuration for a
+given evaluator (e.g., <a class="reference internal" href="#langchain.smith.evaluation.config.RunEvalConfig.QA" title="langchain.smith.evaluation.config.RunEvalConfig.QA"><code class="xref py py-class docutils literal notranslate"><span class="pre">RunEvalConfig.QA</span></code></a>).</p></li>
+<li><p><strong>custom_evaluators</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Union</em><em>[</em><em>RunEvaluator</em><em>, </em><a class="reference internal" href="../evaluation/langchain.evaluation.schema.StringEvaluator.html#langchain.evaluation.schema.StringEvaluator" title="langchain.evaluation.schema.StringEvaluator"><em>StringEvaluator</em></a><em>]</em><em>]</em><em>]</em>) – Custom evaluators to apply to the dataset run.</p></li>
+<li><p><strong>reference_key</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The key in the dataset run to use as the reference string.
+If not provided, it will be inferred automatically.</p></li>
+<li><p><strong>prediction_key</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The key from the traced run’s outputs dictionary to use to
+represent the prediction. If not provided, it will be inferred
+automatically.</p></li>
+<li><p><strong>input_key</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The key from the traced run’s inputs dictionary to use to represent the
+input. If not provided, it will be inferred automatically.</p></li>
+<li><p><strong>eval_llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to pass to any evaluators that use a language model.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.custom_evaluators">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">custom_evaluators</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">langsmith.evaluation.evaluator.RunEvaluator</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.StringEvaluator.html#langchain.evaluation.schema.StringEvaluator" title="langchain.evaluation.schema.StringEvaluator"><span class="pre">langchain.evaluation.schema.StringEvaluator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.custom_evaluators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom evaluators to apply to the dataset run.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.eval_llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eval_llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.eval_llm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The language model to pass to any evaluators that require one.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.evaluators">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluators</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><span class="pre">langchain.smith.evaluation.config.EvalConfig</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.evaluators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configurations for which evaluators to apply to the dataset run.
+Each can be the string of an
+<a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluatorType</span></code></a>, such
+as <cite>EvaluatorType.QA</cite>, the evaluator type string (“qa”), or a configuration for a
+given evaluator
+(e.g.,
+<a class="reference internal" href="#langchain.smith.evaluation.config.RunEvalConfig.QA" title="langchain.smith.evaluation.config.RunEvalConfig.QA"><code class="xref py py-class docutils literal notranslate"><span class="pre">RunEvalConfig.QA</span></code></a>).</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.input_key">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.input_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key from the traced run’s inputs dictionary to use to represent the
+input. If not provided, it will be inferred automatically.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.prediction_key">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prediction_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.prediction_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key from the traced run’s outputs dictionary to use to
+represent the prediction. If not provided, it will be inferred
+automatically.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.reference_key">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reference_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.reference_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The key in the dataset run to use as the reference string.
+If not provided, we will attempt to infer automatically.</p>
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.CoTQA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CoTQA</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.CoTQA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.CoTQA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a context-based QA evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><em>BasePromptTemplate</em></a><em>]</em>) – The prompt template to use for generating the question.</p></li>
+<li><p><strong>llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to use for the evaluation chain.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">llm</span> <span class="pre">(Optional[langchain.schema.language_model.BaseLanguageModel])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">prompt</span> <span class="pre">(Optional[langchain.schema.prompt_template.BasePromptTemplate])</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.CoTQA.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.CONTEXT_QA</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.CoTQA.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.CoTQA.llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.CoTQA.llm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.CoTQA.prompt">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><span class="pre">langchain.schema.prompt_template.BasePromptTemplate</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.CoTQA.prompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.CoTQA.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.CoTQA.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.ContextQA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ContextQA</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.ContextQA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.ContextQA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a context-based QA evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><em>BasePromptTemplate</em></a><em>]</em>) – The prompt template to use for generating the question.</p></li>
+<li><p><strong>llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to use for the evaluation chain.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">llm</span> <span class="pre">(Optional[langchain.schema.language_model.BaseLanguageModel])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">prompt</span> <span class="pre">(Optional[langchain.schema.prompt_template.BasePromptTemplate])</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.ContextQA.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.CONTEXT_QA</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.ContextQA.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.ContextQA.llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.ContextQA.llm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.ContextQA.prompt">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><span class="pre">langchain.schema.prompt_template.BasePromptTemplate</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.ContextQA.prompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.ContextQA.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.ContextQA.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Criteria">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Criteria</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.Criteria"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Criteria" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a reference-free criteria evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>criteria</strong> (<em>Optional</em><em>[</em><em>CRITERIA_TYPE</em><em>]</em>) – The criteria to evaluate.</p></li>
+<li><p><strong>llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to use for the evaluation chain.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">criteria</span> <span class="pre">(Optional[Union[Mapping[str,</span> <span class="pre">str],</span> <span class="pre">langchain.evaluation.criteria.eval_chain.Criteria,</span> <span class="pre">langchain.chains.constitutional_ai.models.ConstitutionalPrinciple]])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">llm</span> <span class="pre">(Optional[langchain.schema.language_model.BaseLanguageModel])</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Criteria.criteria">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">criteria</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html#langchain.evaluation.criteria.eval_chain.Criteria" title="langchain.evaluation.criteria.eval_chain.Criteria"><span class="pre">langchain.evaluation.criteria.eval_chain.Criteria</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../chains/langchain.chains.constitutional_ai.models.ConstitutionalPrinciple.html#langchain.chains.constitutional_ai.models.ConstitutionalPrinciple" title="langchain.chains.constitutional_ai.models.ConstitutionalPrinciple"><span class="pre">langchain.chains.constitutional_ai.models.ConstitutionalPrinciple</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Criteria.criteria" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Criteria.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.CRITERIA</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Criteria.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Criteria.llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Criteria.llm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Criteria.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Criteria.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EmbeddingDistance</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.EmbeddingDistance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for an embedding distance evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>embeddings</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../embeddings/langchain.embeddings.base.Embeddings.html#langchain.embeddings.base.Embeddings" title="langchain.embeddings.base.Embeddings"><em>Embeddings</em></a><em>]</em>) – The embeddings to use for computing the distance.</p></li>
+<li><p><strong>distance_metric</strong> (<em>Optional</em><em>[</em><em>EmbeddingDistanceEnum</em><em>]</em>) – The distance metric to use for computing the distance.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">distance_metric</span> <span class="pre">(Optional[langchain.evaluation.embedding_distance.base.EmbeddingDistance])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">embeddings</span> <span class="pre">(Optional[langchain.embeddings.base.Embeddings])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.distance_metric">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_metric</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../evaluation/langchain.evaluation.embedding_distance.base.EmbeddingDistance.html#langchain.evaluation.embedding_distance.base.EmbeddingDistance" title="langchain.evaluation.embedding_distance.base.EmbeddingDistance"><span class="pre">langchain.evaluation.embedding_distance.base.EmbeddingDistance</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.distance_metric" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.embeddings">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../embeddings/langchain.embeddings.base.Embeddings.html#langchain.embeddings.base.Embeddings" title="langchain.embeddings.base.Embeddings"><span class="pre">langchain.embeddings.base.Embeddings</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.embeddings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.EMBEDDING_DISTANCE</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.EmbeddingDistance.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LabeledCriteria</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.LabeledCriteria"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a labeled (with references) criteria evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>criteria</strong> (<em>Optional</em><em>[</em><em>CRITERIA_TYPE</em><em>]</em>) – The criteria to evaluate.</p></li>
+<li><p><strong>llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to use for the evaluation chain.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">criteria</span> <span class="pre">(Optional[Union[Mapping[str,</span> <span class="pre">str],</span> <span class="pre">langchain.evaluation.criteria.eval_chain.Criteria,</span> <span class="pre">langchain.chains.constitutional_ai.models.ConstitutionalPrinciple]])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">llm</span> <span class="pre">(Optional[langchain.schema.language_model.BaseLanguageModel])</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.criteria">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">criteria</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html#langchain.evaluation.criteria.eval_chain.Criteria" title="langchain.evaluation.criteria.eval_chain.Criteria"><span class="pre">langchain.evaluation.criteria.eval_chain.Criteria</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../chains/langchain.chains.constitutional_ai.models.ConstitutionalPrinciple.html#langchain.chains.constitutional_ai.models.ConstitutionalPrinciple" title="langchain.chains.constitutional_ai.models.ConstitutionalPrinciple"><span class="pre">langchain.chains.constitutional_ai.models.ConstitutionalPrinciple</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.criteria" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.LABELED_CRITERIA</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.llm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.LabeledCriteria.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.QA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QA</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.QA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.QA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a QA evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><em>BasePromptTemplate</em></a><em>]</em>) – The prompt template to use for generating the question.</p></li>
+<li><p><strong>llm</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><em>BaseLanguageModel</em></a><em>]</em>) – The language model to use for the evaluation chain.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">llm</span> <span class="pre">(Optional[langchain.schema.language_model.BaseLanguageModel])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">prompt</span> <span class="pre">(Optional[langchain.schema.prompt_template.BasePromptTemplate])</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.QA.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.QA</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.QA.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.QA.llm">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">llm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.language_model.BaseLanguageModel.html#langchain.schema.language_model.BaseLanguageModel" title="langchain.schema.language_model.BaseLanguageModel"><span class="pre">langchain.schema.language_model.BaseLanguageModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.QA.llm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.QA.prompt">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../schema/langchain.schema.prompt_template.BasePromptTemplate.html#langchain.schema.prompt_template.BasePromptTemplate" title="langchain.schema.prompt_template.BasePromptTemplate"><span class="pre">langchain.schema.prompt_template.BasePromptTemplate</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.QA.prompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.QA.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.QA.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.StringDistance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StringDistance</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.StringDistance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.StringDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="langchain.smith.evaluation.config.EvalConfig.html#langchain.smith.evaluation.config.EvalConfig" title="langchain.smith.evaluation.config.EvalConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvalConfig</span></code></a></p>
+<p>Configuration for a string distance evaluator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>distance</strong> (<em>Optional</em><em>[</em><em>StringDistanceEnum</em><em>]</em>) – The string distance metric to use.</p>
+</dd>
+</dl>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fields</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">distance</span> <span class="pre">(Optional[langchain.evaluation.string_distance.base.StringDistance])</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluator_type</span> <span class="pre">(langchain.evaluation.schema.EvaluatorType)</span></code></p></li>
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_score</span> <span class="pre">(bool)</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.StringDistance.distance">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../evaluation/langchain.evaluation.string_distance.base.StringDistance.html#langchain.evaluation.string_distance.base.StringDistance" title="langchain.evaluation.string_distance.base.StringDistance"><span class="pre">langchain.evaluation.string_distance.base.StringDistance</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.StringDistance.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The string distance metric to use.
+damerau_levenshtein: The Damerau-Levenshtein distance.
+levenshtein: The Levenshtein distance.
+jaro: The Jaro distance.
+jaro_winkler: The Jaro-Winkler distance.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.StringDistance.evaluator_type">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluator_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType" title="langchain.evaluation.schema.EvaluatorType"><span class="pre">langchain.evaluation.schema.EvaluatorType</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">EvaluatorType.STRING_DISTANCE</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.StringDistance.evaluator_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.StringDistance.normalize_score">
+<em class="property"><span class="pre">param</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normalize_score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.StringDistance.normalize_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to normalize the distance to between 0 and 1.
+Applies only to the Levenshtein and Damerau-Levenshtein distances.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.StringDistance.get_kwargs">
+<span class="sig-name descname"><span class="pre">get_kwargs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.StringDistance.get_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the keyword arguments for the load_evaluator call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The keyword arguments for the load_evaluator call.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class pydantic_config">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Config">
+<em class="property"><span class="pre">model</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/langchain/smith/evaluation/config.html#RunEvalConfig.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langchain.smith.evaluation.config.RunEvalConfig.Config.arbitrary_types_allowed">
+<span class="sig-name descname"><span class="pre">arbitrary_types_allowed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#langchain.smith.evaluation.config.RunEvalConfig.Config.arbitrary_types_allowed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<h1>Examples using RunEvalConfig<a class="headerlink" href="#langchain-smith-evaluation-config-runevalconfig" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python.langchain.com/docs/guides/langsmith/walkthrough">LangSmith Walkthrough</a></p></li>
+</ul>
+</section>
+
+
+      </div>
+    <div class="container">
+      <footer class="sk-content-footer">
+            &copy; 2023, Harrison Chase.
+          Last updated on Jul 29, 2023.
+          <a href="../_sources/smith/langchain.smith.evaluation.config.RunEvalConfig.rst.txt" rel="nofollow">Show this page source</a>
+      </footer>
+    </div>
+  </div>
+</div>
+<script src="../_static/js/vendor/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		'.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+    var hide_text = 'Hide prompts and outputs';
+    var show_text = 'Show prompts and outputs';
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        if (jthis.find('.gp').length > 0) {
+            var button = $('<span class="copybutton">&gt;&gt;&gt;</span>');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+            jthis.prepend(button);
+        }
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+    // define the behavior of the button when it's clicked
+    $('.copybutton').click(function(e){
+        e.preventDefault();
+        var button = $(this);
+        if (button.data('hidden') === 'false') {
+            // hide the code output
+            button.parent().find('.go, .gp, .gt').hide();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'hidden');
+            button.css('text-decoration', 'line-through');
+            button.attr('title', show_text);
+            button.data('hidden', 'true');
+        } else {
+            // show the code output
+            button.parent().find('.go, .gp, .gt').show();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'visible');
+            button.css('text-decoration', 'none');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+        }
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+</body>
+</html>

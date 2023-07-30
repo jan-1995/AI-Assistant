@@ -1,0 +1,39 @@
+{
+  "arch": "x86_64",
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/menpo/win-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "C:\\Users\\haide\\anaconda3\\pkgs\\wget-1.16.3-0",
+  "features": "",
+  "files": [
+    "Library/bin/wget.exe",
+    ".nonadmin"
+  ],
+  "fn": "wget-1.16.3-0.tar.bz2",
+  "license": "GPL",
+  "link": {
+    "source": "C:\\Users\\haide\\anaconda3\\pkgs\\wget-1.16.3-0",
+    "type": 1
+  },
+  "md5": "279400f8529cb6506d58e659c794d09e",
+  "name": "wget",
+  "package_tarball_full_path": "C:\\Users\\haide\\anaconda3\\pkgs\\wget-1.16.3-0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/wget.exe",
+        "path_type": "hardlink"
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "win32",
+  "requested_spec": "wget",
+  "size": 1517702,
+  "subdir": "win-64",
+  "track_features": "",
+  "url": "https://conda.anaconda.org/menpo/win-64/wget-1.16.3-0.tar.bz2",
+  "version": "1.16.3"
+}

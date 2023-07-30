@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /en/bagatur-mod_desc/ # Hidden version
+
+Sitemap: https://api.python.langchain.com/sitemap.xml

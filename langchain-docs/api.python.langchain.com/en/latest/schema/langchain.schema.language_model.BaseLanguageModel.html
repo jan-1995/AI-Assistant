@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>langchain.schema.language_model.BaseLanguageModel &mdash; 🦜🔗 LangChain 0.0.247</title>
+  
+  <link rel="canonical" href="http://scikit-learn.org/stable/schema/langchain.schema.language_model.BaseLanguageModel.html" />
+
+  
+
+  <link rel="stylesheet" href="../_static/css/vendor/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="/_/static/css/badge_only.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+<script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script> 
+
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="/_/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": false, "api_host": "https://readthedocs.org", "builder": "sphinx", "canonical_url": null, "docroot": "/docs/api_reference", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "schema/langchain.schema.language_model.BaseLanguageModel", "programming_language": "words", "project": "langchain", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "scikit-learn-modern", "user_analytics_code": "", "version": "latest"}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="/_/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+<body>
+
+
+
+
+
+<nav id="navbar" class="sk-docs-navbar navbar navbar-expand-md navbar-light bg-light py-0">
+  <div class="container-fluid sk-docs-container px-0">
+    <button
+      id="sk-navbar-toggler"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="sk-navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../api_reference.html">API</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" href="../experimental_api_reference.html">Experimental</a>
+        </li>
+        <li class="nav-item">
+          <a class="sk-nav-link nav-link" target="_blank" rel="noopener noreferrer" href="https://python.langchain.com/">Python Docs</a>
+        </li>
+      </ul>
+      <div id="searchbox" role="search">
+          <div class="searchformwrapper">
+          <form class="search" action="../search.html" method="get">
+            <input class="sk-search-text-input" type="text" name="q" aria-labelledby="searchlabel" />
+            <input class="sk-search-text-btn" type="submit" value="Go" />
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="d-flex" id="sk-doc-wrapper">
+    <input type="checkbox" name="sk-toggle-checkbox" id="sk-toggle-checkbox">
+    <label id="sk-sidemenu-toggle" class="sk-btn-toggle-toc btn sk-btn-primary" for="sk-toggle-checkbox">Toggle Menu</label>
+    <div id="sk-sidebar-wrapper" class="border-right">
+      <div class="sk-sidebar-toc-wrapper">
+        <div class="btn-group w-100 mb-2" role="group" aria-label="rellinks">
+            <a href="langchain.schema.document.Document.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.schema.document.Document">Prev</a><a href="../api_reference.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain API Reference">Up</a>
+            <a href="langchain.schema.memory.BaseChatMessageHistory.html" role="button" class="btn sk-btn-rellink py-1" sk-rellink-tooltip="langchain.schema.memory.BaseChatMessageHistory">Next</a>
+        </div>
+        <div class="alert alert-warning p-1 mb-2" role="alert">
+          <p class="text-center mb-0">
+          <strong>LangChain 0.0.247</strong><br/>
+          </p>
+        </div>
+            <div class="sk-sidebar-toc">
+              <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.schema.language_model</span></code>.BaseLanguageModel</a></li>
+</ul>
+
+            </div>
+      </div>
+    </div>
+    <div id="sk-page-content-wrapper">
+      <div class="sk-page-content container-fluid body px-md-3" role="main">
+        
+  <section id="langchain-schema-language-model-baselanguagemodel">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">langchain.schema.language_model</span></code>.BaseLanguageModel<a class="headerlink" href="#langchain-schema-language-model-baselanguagemodel" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langchain.schema.language_model.</span></span><span class="sig-name descname"><span class="pre">BaseLanguageModel</span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../load/langchain.load.serializable.Serializable.html#langchain.load.serializable.Serializable" title="langchain.load.serializable.Serializable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Serializable</span></code></a>, <a class="reference internal" href="langchain.schema.runnable.Runnable.html#langchain.schema.runnable.Runnable" title="langchain.schema.runnable.Runnable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Runnable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="langchain.schema.prompt.PromptValue.html#langchain.schema.prompt.PromptValue" title="langchain.schema.prompt.PromptValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">PromptValue</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseMessage</span></code></a>]], <code class="xref py py-obj docutils literal notranslate"><span class="pre">LanguageModelOutput</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for interfacing with language models.</p>
+<p>All language model wrappers inherit from BaseLanguageModel.</p>
+<p>Exposes three main methods:
+- generate_prompt: generate language model outputs for a sequence of prompt</p>
+<blockquote>
+<div><p>values. A prompt value is a model input that can be converted to any language
+model input format (string or messages).</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>predict: pass in a single string to a language model and return a string</dt><dd><p>prediction.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>predict_messages: pass in a sequence of BaseMessages (corresponding to a single</dt><dd><p>model call) to a language model and return a BaseMessage prediction.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Each of these has an equivalent asynchronous method.</p>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.agenerate_prompt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">agenerate_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.schema.prompt.PromptValue.html#langchain.schema.prompt.PromptValue" title="langchain.schema.prompt.PromptValue"><span class="pre">PromptValue</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callbacks</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain.schema.output.LLMResult.html#langchain.schema.output.LLMResult" title="langchain.schema.output.LLMResult"><span class="pre">LLMResult</span></a></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.agenerate_prompt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.agenerate_prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronously pass a sequence of prompts and return model generations.</p>
+<p>This method should make use of batched calls for models that expose a batched
+API.</p>
+<dl class="simple">
+<dt>Use this method when you want to:</dt><dd><ol class="arabic simple">
+<li><p>take advantage of batched calls,</p></li>
+<li><p>need more output from the model than just the top generated value,</p></li>
+<li><dl class="simple">
+<dt>are building chains that are agnostic to the underlying language model</dt><dd><p>type (e.g., pure text completion models vs chat models).</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompts</strong> – List of PromptValues. A PromptValue is an object that can be
+converted to match the format of any language model (string for pure
+text generation models and BaseMessages for chat models).</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>callbacks</strong> – Callbacks to pass through. Used for executing additional
+functionality, such as logging or streaming, throughout generation.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>An LLMResult, which contains a list of candidate Generations for each input</dt><dd><p>prompt and additional model provider-specific output.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.apredict">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apredict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.apredict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.apredict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronously pass a string to the model and return a string prediction.</p>
+<dl class="simple">
+<dt>Use this method when calling pure text generation models and only the top</dt><dd><p>candidate generation is needed.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – String input to pass to the model.</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Top model prediction as a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.apredict_messages">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apredict_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><span class="pre">BaseMessage</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><span class="pre">BaseMessage</span></a></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.apredict_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.apredict_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronously pass messages to the model and return a message prediction.</p>
+<dl class="simple">
+<dt>Use this method when calling chat models and only the top</dt><dd><p>candidate generation is needed.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>messages</strong> – A sequence of chat messages corresponding to a single model input.</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Top model prediction as a message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.generate_prompt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.schema.prompt.PromptValue.html#langchain.schema.prompt.PromptValue" title="langchain.schema.prompt.PromptValue"><span class="pre">PromptValue</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callbacks</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain.schema.output.LLMResult.html#langchain.schema.output.LLMResult" title="langchain.schema.output.LLMResult"><span class="pre">LLMResult</span></a></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.generate_prompt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.generate_prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass a sequence of prompts to the model and return model generations.</p>
+<p>This method should make use of batched calls for models that expose a batched
+API.</p>
+<dl class="simple">
+<dt>Use this method when you want to:</dt><dd><ol class="arabic simple">
+<li><p>take advantage of batched calls,</p></li>
+<li><p>need more output from the model than just the top generated value,</p></li>
+<li><dl class="simple">
+<dt>are building chains that are agnostic to the underlying language model</dt><dd><p>type (e.g., pure text completion models vs chat models).</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompts</strong> – List of PromptValues. A PromptValue is an object that can be
+converted to match the format of any language model (string for pure
+text generation models and BaseMessages for chat models).</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>callbacks</strong> – Callbacks to pass through. Used for executing additional
+functionality, such as logging or streaming, throughout generation.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>An LLMResult, which contains a list of candidate Generations for each input</dt><dd><p>prompt and additional model provider-specific output.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.get_num_tokens">
+<span class="sig-name descname"><span class="pre">get_num_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.get_num_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.get_num_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of tokens present in the text.</p>
+<p>Useful for checking if an input will fit in a model’s context window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – The string input to tokenize.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The integer number of tokens in the text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.get_num_tokens_from_messages">
+<span class="sig-name descname"><span class="pre">get_num_tokens_from_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><span class="pre">BaseMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.get_num_tokens_from_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.get_num_tokens_from_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of tokens in the messages.</p>
+<p>Useful for checking if an input will fit in a model’s context window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>messages</strong> – The message inputs to tokenize.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The sum of the number of tokens across the messages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.get_token_ids">
+<span class="sig-name descname"><span class="pre">get_token_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.get_token_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.get_token_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the ordered ids of the tokens in a text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – The string input to tokenize.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of ids corresponding to the tokens in the text, in order they occur</dt><dd><p>in the text.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.predict">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass a single string input to the model and return a string prediction.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Use this method when passing in raw text. If you want to pass in specific</dt><dd><p>types of chat messages, use predict_messages.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – String input to pass to the model.</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Top model prediction as a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.predict_messages">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><span class="pre">BaseMessage</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="langchain.schema.messages.BaseMessage.html#langchain.schema.messages.BaseMessage" title="langchain.schema.messages.BaseMessage"><span class="pre">BaseMessage</span></a></span></span><a class="reference internal" href="../_modules/langchain/schema/language_model.html#BaseLanguageModel.predict_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.predict_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass a message sequence to the model and return a message prediction.</p>
+<dl class="simple">
+<dt>Use this method when passing in chat messages. If you want to pass in raw text,</dt><dd><p>use predict.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>messages</strong> – A sequence of chat messages corresponding to a single model input.</p></li>
+<li><p><strong>stop</strong> – Stop words to use when generating. Model output is cut off at the
+first occurrence of any of these substrings.</p></li>
+<li><p><strong>**kwargs</strong> – Arbitrary additional keyword arguments. These are usually passed
+to the model provider API call.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Top model prediction as a message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../load/langchain.load.serializable.SerializedConstructor.html#langchain.load.serializable.SerializedConstructor" title="langchain.load.serializable.SerializedConstructor"><span class="pre">SerializedConstructor</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../load/langchain.load.serializable.SerializedNotImplemented.html#langchain.load.serializable.SerializedNotImplemented" title="langchain.load.serializable.SerializedNotImplemented"><span class="pre">SerializedNotImplemented</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.to_json_not_implemented">
+<span class="sig-name descname"><span class="pre">to_json_not_implemented</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../load/langchain.load.serializable.SerializedNotImplemented.html#langchain.load.serializable.SerializedNotImplemented" title="langchain.load.serializable.SerializedNotImplemented"><span class="pre">SerializedNotImplemented</span></a></span></span><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.to_json_not_implemented" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.lc_attributes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lc_attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.lc_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of attribute names that should be included in the
+serialized kwargs. These attributes must be accepted by the
+constructor.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.lc_namespace">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lc_namespace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.lc_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the namespace of the langchain object.
+eg. [“langchain”, “llms”, “openai”]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.lc_secrets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lc_secrets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.lc_secrets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a map of constructor argument names to secret ids.
+eg. {“openai_api_key”: “OPENAI_API_KEY”}</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.lc_serializable">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lc_serializable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.lc_serializable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether or not the class is serializable.</p>
+</dd></dl>
+
+<dl class="py class pydantic_config">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.Config">
+<em class="property"><span class="pre">model</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langchain.schema.language_model.BaseLanguageModel.Config.extra">
+<span class="sig-name descname"><span class="pre">extra</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ignore'</span></em><a class="headerlink" href="#langchain.schema.language_model.BaseLanguageModel.Config.extra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<h1>Examples using BaseLanguageModel<a class="headerlink" href="#langchain-schema-language-model-baselanguagemodel" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python.langchain.com/docs/modules/chains/how_to/custom_chain">Custom chain</a></p></li>
+</ul>
+</section>
+
+
+      </div>
+    <div class="container">
+      <footer class="sk-content-footer">
+            &copy; 2023, Harrison Chase.
+          Last updated on Jul 29, 2023.
+          <a href="../_sources/schema/langchain.schema.language_model.BaseLanguageModel.rst.txt" rel="nofollow">Show this page source</a>
+      </footer>
+    </div>
+  </div>
+</div>
+<script src="../_static/js/vendor/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* Add a [>>>] button on the top-right corner of code samples to hide
+     * the >>> and ... prompts and the output and thus make the code
+     * copyable. */
+    var div = $('.highlight-python .highlight,' +
+                '.highlight-python3 .highlight,' +
+                '.highlight-pycon .highlight,' +
+		'.highlight-default .highlight')
+    var pre = div.find('pre');
+
+    // get the styles from the current theme
+    pre.parent().parent().css('position', 'relative');
+    var hide_text = 'Hide prompts and outputs';
+    var show_text = 'Show prompts and outputs';
+
+    // create and add the button to all the code blocks that contain >>>
+    div.each(function(index) {
+        var jthis = $(this);
+        if (jthis.find('.gp').length > 0) {
+            var button = $('<span class="copybutton">&gt;&gt;&gt;</span>');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+            jthis.prepend(button);
+        }
+        // tracebacks (.gt) contain bare text elements that need to be
+        // wrapped in a span to work with .nextUntil() (see later)
+        jthis.find('pre:has(.gt)').contents().filter(function() {
+            return ((this.nodeType == 3) && (this.data.trim().length > 0));
+        }).wrap('<span>');
+    });
+
+    // define the behavior of the button when it's clicked
+    $('.copybutton').click(function(e){
+        e.preventDefault();
+        var button = $(this);
+        if (button.data('hidden') === 'false') {
+            // hide the code output
+            button.parent().find('.go, .gp, .gt').hide();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'hidden');
+            button.css('text-decoration', 'line-through');
+            button.attr('title', show_text);
+            button.data('hidden', 'true');
+        } else {
+            // show the code output
+            button.parent().find('.go, .gp, .gt').show();
+            button.next('pre').find('.gt').nextUntil('.gp, .go').css('visibility', 'visible');
+            button.css('text-decoration', 'none');
+            button.attr('title', hide_text);
+            button.data('hidden', 'false');
+        }
+    });
+
+	/*** Add permalink buttons next to glossary terms ***/
+	$('dl.glossary > dt[id]').append(function() {
+		return ('<a class="headerlink" href="#' +
+			    this.getAttribute('id') +
+			    '" title="Permalink to this term">¶</a>');
+	});
+});
+
+</script>
+    
+</body>
+</html>
